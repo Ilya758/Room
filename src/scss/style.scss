@@ -1,0 +1,21 @@
+@import "base/reset.scss";
+// or normalize
+@import "base/mixins.scss";
+@import "base/vars.scss";
+
+@font-face {
+  font-family: "Roboto-Regular";
+  src: url(../fonts/Roboto-Regular.ttf);
+}
+
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@include landscapePhones {
+  .container {
+    padding: 0 15px;
+  }
+}
