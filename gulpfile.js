@@ -12,7 +12,7 @@ let path = {
   src: {
     html: [sourceFolder + "/pages/*.html", "!" + sourceFolder + "/pages/components/*.html"],
     css: sourceFolder + "/scss/style.scss",
-    js: sourceFolder + "/js/script.js",
+    js: sourceFolder + "/js/*.js",
     img: sourceFolder + "/img/**/*.{jpg,png,svg,gif,ico,webp}",
     fonts: sourceFolder + "/fonts/*.ttf",
   },
@@ -31,7 +31,7 @@ let {
 } = require('gulp'),
   gulp = require('gulp'),
   browsersync = require('browser-sync').create(),
-  pug = require('gulp-pug'),
+  //pug = require('gulp-pug'),
   del = require('del'),
   sass = require('gulp-sass'),
   autoprefixer = require('gulp-autoprefixer'),
@@ -53,11 +53,11 @@ function browserSync() {
 
 function html() {
   return src(path.src.html)
-    .pipe(
+    /**.pipe(
       pug({
         pretty: true
       })
-    )
+    ) */
     .pipe(dest(path.build.html))
     .pipe(browsersync.stream());
 }
