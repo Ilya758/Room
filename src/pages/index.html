@@ -10,234 +10,273 @@
 </head>
 
 <body>
-  <header class="header" id='toTop'>
-    <div class="header-top">
-      <div class="container header-top-container">
-        <ul class="menu__list header-top__list">
-          <li class="menu__item header-top__item">
-            <a href="#" class="text header-top__link">
-              <span>CONTACT SALES</span>
-            </a>
-          </li>
-          <li class="menu__item header-contact__item">
-            <span class="text">TEL 646-791-3726</span>
-          </li>
-          <li class="menu__item header-contact__item dropdown">
-            <span class="text">US</span>
-            <span class="--arrow-down"></span>
-            <ul class="dropdown__list">
-              <li class="dropdown__list-item">US</li>
-              <li class="dropdown__list-item">Tokio</li>
-              <li class="dropdown__list-item">Japan</li>
-              <li class="dropdown__list-item">Russia</li>
-              <li class="dropdown__list-item">Germany</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
+  <div class="popup-map">
+    <div class="popup-map__content" id="popup_content">
+      <script async
+        src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A76d42377514b60e1a1950199dd3fa7fa5c6f25bf0b533112124ecd01292bab3d&amp;width=100%&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
     </div>
-    <div class="header-bottom">
-      <div class="container header-bottom-container">
-        <div class="header-bottom__content">
-          <div class="header-bottom__logo">
-            <a href="#">
-              <img src="img/logo_header.svg" alt="logo_header">
-            </a>
-          </div>
-          <nav class="header-bottom__nav">
-            <ul class="menu__list header-bottom__list">
-              <li class="menu__item header-bottom__item">
-                <a href="#" class="text header-bottom__link">PRODUCTS</a>
-              </li>
-              <li class="menu__item header-bottom__item">
-                <a href="#" class="text header-bottom__link">EXPLORE</a>
-              </li>
-              <li class="menu__item header-bottom__item">
-                <a href="#" class="text header-bottom__link">SHOP</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="header-bottom__additional">
-            <ul class="menu__list header-bottom__list">
-              <li class="menu__item header-bottom__item">
-                <a href="#" class="text header-bottom__link">
-                  <span class="--dot-icon"></span>
-                  <span>SHOWROOMS</span>
+  </div>
+  <div class="wrapper">
+    <div class="wrapper-inner">
+      <header class="header" id='toTop'>
+        <div class="header-top">
+          <div class="container">
+            <ul class="menu__list header-top__list">
+              <li class="menu__item header-top__item">
+                <a href="#" class="text header-top__text">
+                  <span>CONTACT SALES</span>
                 </a>
               </li>
-              <li class="menu__item header-nav__item">
-                <a href="#" class="header-nav__link">
-                  <span class="--basket-icon"></span>
-                </a>
+              <li class="menu__item header-contact__item">
+                <span class="text dropdown__text header-top__text">TEL 646-791-3726</span>
               </li>
+              <li class="menu__item header-contact__item">
+                <div class="dropdown">
+                  <div class="dropdown-inner" id="header_drop">
+                    <input readonly class="text dropdown__text header-inner__text drop__select" type="text">
+                    <span class="icons --arrow-down" id="head_drop_icon"></span>
+                  </div>
+                  <ul class="dropdown__list head-contact__dropdown" id="header__dropdown-list">
+                    <li class="dropdown__list-item text header-drop__text">US</li>
+                    <li class="dropdown__list-item text header-drop__text">Tokio</li>
+                    <li class="dropdown__list-item text header-drop__text">Japan</li>
+                    <li class="dropdown__list-item text header-drop__text">Russia</li>
+                    <li class="dropdown__list-item text header-drop__text">Germany</li>
+                  </ul>
+                </div>
             </ul>
           </div>
         </div>
-      </div>
-    </div>
-  </header>
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="container footer-inner-container">
-        <div class="footer-inner__content">
-          <div class="footer-inner__logo">
-            <a href="#">
-              <img src="img/logo_footer.png" alt="footer_header">
-            </a>
-          </div>
-          <nav class="footer-inner__nav">
-            <ul class="menu__list footer-inner-list">
-              <li class="menu__item footer-inner-item">
-                <ul class="text">About
-                  <li>
-                    <a href="#" class="text">Compare</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Reviews</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Risk-Free Trial</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Careers</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Press</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Podcast</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Blog</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu__item footer-inner-item">
-                <ul class="text">Support
-                  <li>
-                    <a href="#" class="text">FAQ</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Booth Assembly</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Delivery</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Room Service</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Warranty</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Terms of Use</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Privacy Policy</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Copyright</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu__item footer-inner__item">
-                <ul class="text">Showrooms
-                  <li>
-                    <a href="#" class="text">New York</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">London</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">San Francisco</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Paris</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Copenhagen</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Zürich</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Los Angeles</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Berlin</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Belgium</a>
-                  </li>
-                  <li>
-                    <a href="#" class="text">Virtual Demo</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu__item footer-inner__item">
-                <ul class="text">Office
-                  <li class="menu__item">
-                    <span class="text">599 Broadway, FL 9 New York, NY 10012</span>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu__item footer-inner__item">
-                <ul class="menu__list footer-inner__contact-list">Follow us
-                  <li class="menu__item footer-inner__contact-item">
-                    <a href="#" class="menu__link">
-                      <span class="--facebook-icon"></span></a>
-                  </li>
-                  <li class="menu__item footer-inner__contact-item">
-                    <a href="#" class="menu__link">
-                      <span class="--instagram-icon"></span></a>
-                  </li>
-                  <li class="menu__item footer-inner__contact-item">
-                    <a href="#" class="menu__link">
-                      <span class="--linkedin-icon"></span></a>
-                  </li>
-                  <li class="menu__item footer-inner__contact-item">
-                    <a href="#" class="menu__link">
-                      <span class="--pinterest-icon"></span></a>
-                  </li>
-                </ul>
-              </li>
-              <li class="menu__item footer-inner__item">Join our mailing list
-                <form action="#" class="submit-form">
-                  <p class="text submit-form__text">Be the first to hear everything about ROOM.</p>
-                  <div class="submit-form__reviews-inner">
-                    <textarea class="submit-form__reviews" name="review" id="review__text" cols="30" rows="10">
-                    </textarea>
-                  </div>
-                  <div class="dropdown">
-                    <input class="dropdown__select" type="text" readonly>
-                    <ul class="dropdown__list">
-                      <li class="dropdown__list-item">United States</li>
-                      <li class="dropdown__list-item">Tokio</li>
-                      <li class="dropdown__list-item">Japan</li>
-                      <li class="dropdown__list-item">Russia</li>
-                      <li class="dropdown__list-item">Germany</li>
+        <div class="header-bottom">
+          <div class="container header-bottom-container">
+            <div class="content header-bottom__content">
+              <div class="header-bottom__logo">
+                <a href="#">
+                  <img src="img/logo_header.svg" alt="logo_header">
+                </a>
+              </div>
+              <div class="container__hamburg">
+                <span class="icons --icon-hamburg"></span>
+              </div>
+              <nav class="menu__list header-bottom__nav">
+                <div class="menu__list header-bottom__nav-base">
+                  <ul class="menu__list header-bottom__list list_gap_no-gap">
+                    <li class="menu__item header-bottom__nav-item">
+                      <a href="#" class="text header-bottom__link">PRODUCTS</a>
+                    </li>
+                    <li class="menu__item header-bottom__nav-item">
+                      <a href="#" class="text header-bottom__link">EXPLORE</a>
+                    </li>
+                    <li class="menu__item header-bottom__nav-item">
+                      <a href="#" class="text header-bottom__link">SHOP</a>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="menu__list header-bottom__list header-bottom__nav-additional">
+                  <li class="menu__item header-bottom__item" id="map_btn">
+                    <ul class="header-bottom__item-inner map-container">
+                      <li class="menu__item header-bottom__item">
+                        <span class="icons --dot-icon text header-bottom__link"></span>
+                      </li>
+                      <li class="menu__item header-bottom__item">
+                        <span class="text header-bottom__link">SHOWROOMS</span>
+                      </li>
                     </ul>
-                  </div>
-                  <div class="form-confirm">
-                    <input class="form-confirm__check" type="checkbox" name="check" id="check__email">
-                    <p class="text form-text__confirm"> Yes. I would like to receive marketing communications from ROOM
-                      about
-                      product updates
-                      and special offers. Please refer to ROOM’s Privacy Policy for more information about how we
-                      process
-                      your data (including how to unsubscribe). </p>
-                  </div>
-                  <input class="text submit-form__btn" type="submit" value="SIGN UP">
-                </form>
-              </li>
-              <li class="menu__item footer-inner__item"><a href="#toTop" class="text text_rotate_l">RETURN TO THE
-                  TOP</a></li>
-            </ul>
-          </nav>
+                  </li>
+                  <li class="menu__item header-bottom__item basket__icon">
+                    <a href="#" class="header-nav__link">
+                      <span class="icons --basket-icon"></span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="container">
+          <div class="footer__content">
+            <div class="footer__logo">
+              <a href="#">
+                <img class="logo_max-width_none" src="img/logo_footer.png" alt="footer_header">
+              </a>
+            </div>
+            <nav class="footer__nav">
+              <ul class="menu__list footer__nav-list">
+                <li class="menu__item footer__nav-item">
+                  <span class="text text_c_white">About</span>
+                  <ul class="nav__list">
+                    <li class="nav__item footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Compare</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Reviews</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Risk-Free Trial</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Careers</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Press</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Podcast</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Blog</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu__item footer__nav-item">
+                  <span class="text text_c_white">Support</span>
+                  <ul class="nav__list">
+                    <li class="nav__item footer__item_m_padding">
+                      <a href="#" class="text text_c_white">FAQ</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Booth Assembly</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Delivery</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Room Service</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Warranty</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Terms of Use</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Privacy Policy</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Copyright</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu__item footer__nav-item">
+                  <span class="text text_c_white">Showrooms</span>
+                  <ul class="nav__list">
+                    <li class="nav__item footer__item_m_padding">
+                      <a href="#" class="text text_c_white">New York</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">London</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">San Francisco</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Paris</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Copenhagen</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Zürich</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Los Angeles</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Berlin</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Belgium</a>
+                    </li>
+                    <li class="footer__item_m_padding">
+                      <a href="#" class="text text_c_white">Virtual Demo</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="menu__item footer__nav-item">
+                  <span class="text text_c_white">Office</span>
+                  <ul class="nav__list">
+                    <li class="nav__item">
+                      <span class="text text_c_white">599 Broadway, FL 9 New York, NY 10012</span>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </nav>
+            <div class="feedback">
+              <div class="feedback-inner">
+                <span class="text text_c_white">Follow us</span>
+                <ul class="menu__list feedback__list">
+                  <li class="menu__item feedback__item">
+                    <a href="#" class="menu__link">
+                      <span class="icons feedback__icons --facebook-icon"></span></a>
+                  </li>
+                  <li class="menu__item feedback__item">
+                    <a href="#" class="menu__link">
+                      <span class="icons feedback__icons --instagram-icon"></span></a>
+                  </li>
+                  <li class="menu__item feedback__item">
+                    <a href="#" class="menu__link">
+                      <span class="icons feedback__icons --linkedin-icon"></span></a>
+                  </li>
+                  <li class="menu__item feedback__item">
+                    <a href="#" class="menu__link">
+                      <span class="icons feedback__icons --pinterest-icon"></span></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <form action="#" class="submit-form">
+              <div class="submit-form__content">
+                <span class="text text_c_white">Join our mailing list</span>
+                <p class="text text_c_white submit-form__text">Be the first to hear everything about ROOM.</p>
+                <textarea class="submit-form__reviews-inner text text_c_white" name="review" id="review__text"
+                  rows="10"></textarea>
+              </div>
+              <div class="dropdown">
+                <div class="dropdown-inner footer-inner__dropdown" id="footer_drop">
+                  <input readonly class="text dropdown__text footer-inner__text drop__select" type="text"
+                    name="country">
+                  <span class="icons --arrow-down" id="foot_drop_icon"></span>
+                </div>
+                <ul class="dropdown__list footer-contact__dropdown" id="footer__dropdown-list">
+                  <li class="dropdown__list-item text footer-drop__text">US</li>
+                  <li class="dropdown__list-item text footer-drop__text">Tokio</li>
+                  <li class="dropdown__list-item text footer-drop__text">Japan</li>
+                  <li class="dropdown__list-item text footer-drop__text">Russia</li>
+                  <li class="dropdown__list-item text footer-drop__text">Germany</li>
+                </ul>
+              </div>
+              <div class="form-confirm">
+                <div class="checkbox__inner">
+                  <input class="form-confirm__check" type="checkbox" name="check" id="check__email">
+                </div>
+                <p class="text form-text__confirm">Yes. I would like to receive marketing communications from ROOM about
+                  product updates and special
+                  offers.
+                  Please refer to ROOM’s Privacy Policy for more information about how
+                  we process your data (including how to unsubscribe).
+                </p>
+              </div>
+              <div class="submit-form__btn-inner">
+                <input class="text submit-form__btn-text submit-form__btn" type="submit" value="SIGN UP">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="footer__anchor">
+          <div class="menu__item footer__anchor-inner">
+            <a href="#toTop" class="text text_c_white anchor__text_s_sm">RETURN TO THE TOP</a>
+          </div>
         </div>
       </div>
-    </div>
-  </footer>
+    </footer>
+  </div>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/jquery.mobile-events.js"></script>
   <script src="js/script.js"></script>
 </body>
 
