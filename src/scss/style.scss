@@ -106,6 +106,7 @@ body {
   font-family: Roboto;
   text-decoration: none;
   transition: 0.25s linear;
+  //word-wrap: break-word;
 }
 
 .dropdown__text {
@@ -136,6 +137,8 @@ body {
   background-color: #000000;
   transition: 0.15s linear;
   cursor: pointer;
+  height: 60px;
+
 }
 
 .icons:hover {
@@ -315,6 +318,201 @@ body {
 
 .header-bottom__link:hover {
   box-shadow: 0;
+}
+
+.main {
+  display: block;
+}
+
+.designing {
+  display: flex;
+  flex-direction: column;
+}
+
+.designing-room {
+  width: 100%;
+}
+
+.designing-room__content {
+  margin: 49px 56px 80px 57px;
+}
+
+.designing-info {
+  width: 100%;
+}
+
+.designing-info__content {
+  margin: 0 98px 0 102px;
+  display: flex;
+  column-gap: 136px;
+}
+
+.main__text {
+  font-size: 48px;
+  font-weight: normal;
+  color: #1A1A1A;
+}
+
+.heading__text {
+  margin: 2px 0 2px 55px;
+  line-height: 58px;
+}
+
+.text_f_no-flex {
+  flex: 0;
+}
+
+.heading__text-info {
+  margin: 13px 85px 1px 0;
+  max-width: 569px;
+  font-size: 24px;
+  line-height: 40px;
+  color: #AAAAAA;
+}
+
+.designing-pics {
+  width: 100%;
+}
+
+.designing-pics__content {
+  margin: 210px 52px 215px;
+  padding: 0 48px 32px;
+}
+
+.designing-pics__list {
+  gap: 32px 24px;
+}
+
+.designing-pics__item {
+  text-align: left;
+}
+
+.figcaption__text {
+  font-size: 24px;
+  line-height: 28px;
+  color: #1A1A1A;
+}
+
+.brands {
+  width: 100%;
+}
+
+.brands__content {
+  margin: 0 135px 190px;
+  display: flex;
+  flex-direction: column;
+}
+
+.brands__heading{
+  line-height: 48px;
+  text-align: center;
+}
+
+.brands__info-text {
+  display: block;
+  margin: 27px 0 125px;
+  font-size: 24px;
+  line-height: 36px;
+  text-align: center;
+  color: #4A4A4A;
+}
+
+.brands__list {
+  row-gap: 49px;
+}
+
+.--nike-icon {
+  mask-image: url(../img/icons/nike.svg);
+  width: 92px;
+}
+
+.--nasa-icon {
+  mask-image: url(../img/icons/nasa.svg);
+  width: 99px;
+}
+
+.--google-icon {
+  mask-image: url(../img/icons/google.svg);
+  width: 119px;
+}
+
+.--uber-icon {
+  mask-image: url(../img/icons/uber.svg);
+  width: 98px;
+}
+
+.--walmart-icon {
+  mask-image: url(../img/icons/walmart.svg);
+  width: 145px;
+}
+
+.--salesforce-icon {
+  mask-image: url(../img/icons/salesforce.svg);
+  width: 106px;
+}
+
+.--hulu-icon {
+  mask-image: url(../img/icons/hulu.svg);
+  width: 99px;
+}
+
+.--reddit-icon {
+  mask-image: url(../img/icons/reddit.svg);
+  width: 141px;
+}
+
+.--knotel-icon {
+  mask-image: url(../img/icons/knotel.svg);
+  width: 146px;
+}
+
+.--samsung-icon {
+  mask-image: url(../img/icons/samsung.svg);
+  width: 119px;
+}
+
+.--amazon-icon {
+  mask-image: url(../img/icons/amazon.svg);
+  width: 145px;
+}
+
+.--angellist-icon {
+  mask-image: url(../img/icons/angellist.svg);
+  width: 151px;
+}
+
+.--buzzfeed-icon {
+  mask-image: url(../img/icons/buzzfeed.svg);
+  width: 102px;
+}
+
+.--apple-icon {
+  mask-image: url(../img/icons/apple.svg);
+  width: 99px;
+}
+
+.--harrys-icon {
+  mask-image: url(../img/icons/harrys.svg);
+  width: 132px;
+}
+
+.--asana-icon {
+  mask-image: url(../img/icons/asana.svg);
+  width: 98px;
+}
+
+.--jpmorgan-icon {
+  mask-image: url(../img/icons/jpmorgan.svg);
+  width: 161px;
+}
+
+.--greenpeace--icon {
+  mask-image: url(../img/icons/greenpeace.svg);
+  width: 107px;
+}
+
+.brands__item {
+  width: calc(100% / 6);
 }
 
 .footer {
@@ -562,6 +760,20 @@ body {
   }
 }
 @media (max-width: 1439px) {
+  .heading__text {
+    flex: 1 0 250px;
+    font-size: 36px;
+    margin: 2px 0;
+  }
+
+  .designing-pics__content {
+    margin: 110px 52px;
+  }
+
+  .designing-pics__list {
+    justify-content: center;
+  }
+    
   .footer__content {
     justify-content: space-around;
     margin: 97px 0 51px;
@@ -605,6 +817,7 @@ body {
     margin-top: 20px;
     text-align: center;
   }
+
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .container {
@@ -623,6 +836,31 @@ body {
     margin-top: 0;
     text-align: left;
   }
+
+  .designing-info__content {
+    column-gap: 50px;
+  }
+
+  .main__text {
+    font-size: 36px;
+  }
+
+  .heading__text {
+    flex: 1 0 250px;
+  }
+
+  .text_f_no-flex {
+    flex: 0;
+  }
+
+  .heading__text-info {
+    font-size: 24px;
+  }
+
+  .brands__item {
+    width: calc(100% / 3);
+  }
+
 }
 @media (max-width: 1023px) {
   .container__hamburg {
@@ -632,6 +870,7 @@ body {
   .header-bottom__nav {
     display: none;
   }
+
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
@@ -658,6 +897,45 @@ body {
     margin: 0;
   }
 
+  .heading__text {
+    flex: 1 0 200px;
+  }
+
+  .designing-info__content {
+    column-gap: 46px;
+  }
+
+  .text_f_no-flex {
+    flex: 0;
+  }
+
+}
+@media (max-width: 767px) {
+  .designing-info__content {
+    flex-direction: column;
+  }
+
+  .heading__text {
+    flex: 0;
+    margin-bottom: 20px;
+  }
+
+  .heading__text-info {
+    margin: 20px;
+  }
+
+  .designing-pics__content {
+    margin: 0;
+  }
+
+  .brands__content {
+    margin: 0 10px 100px;
+  }
+
+  .brands__item {
+    width: calc(100% / 2);
+  }
+  
 }
 @media (max-width: 1023px) {
   .header-bottom__logo {
@@ -680,6 +958,10 @@ body {
 
   .--basket-icon {
     margin-right: 0;
+  }
+
+  .brands__item {
+    width: calc(100% / 2);
   }
 
 }
@@ -707,6 +989,25 @@ body {
   }
 
 }
+@media (max-width: 575px) {
+  .popup-map__content {
+    width: 80%;
+  }
+
+  .designing-room__content, .designing-info__content {
+    margin: 25px;
+  }
+
+  .heading__text {
+    font-size: 24px;
+  }
+
+  .heading__text-info, .brands__info-text, .figcaption__text {
+    margin: 0;
+    font-size: 16px;
+  }
+
+}
 @media (max-width: 319px) {
   .header-bottom__logo {
     margin-left: 7vw;
@@ -728,9 +1029,8 @@ body {
   .submit-form__reviews-inner {
     width: 85%;
   }
-}
-@media (max-width: 575px) {
-  .popup-map__content {
-    width: 80%;
+
+  .brands__item {
+    width: calc(100% / 1);
   }
 }
