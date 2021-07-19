@@ -99,7 +99,7 @@ body {
 .header-top__list {
   justify-content: flex-end;
   column-gap: 25px;
-  margin-right: 14px;
+  margin-right: 51px;
 }
 
 .text {
@@ -109,13 +109,14 @@ body {
   //word-wrap: break-word;
 }
 
-.dropdown__text {
+.text_e_dropdown {
   font-size: 12px;
   line-height: 33px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #aaaaaa;
   cursor: pointer;
+  text-align: right !important;
 }
 
 .header-top__text {
@@ -138,7 +139,6 @@ body {
   transition: 0.15s linear;
   cursor: pointer;
   height: 60px;
-
 }
 
 .icons:hover {
@@ -176,7 +176,7 @@ body {
   height: 25px;
 }
 
-.menu__list {
+.list {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -237,13 +237,11 @@ body {
   width: 100%;
 }
 
-.header-bottom-container {
-  margin-top: 25px;
-  margin-bottom: 24px;
+.header-bottom__content {
+  margin: 24px 44px 24px 57px;
 }
 
 .header-bottom__logo {
-  margin-left: 100px;
   transition: 0.35s linear;
 }
 
@@ -266,7 +264,7 @@ body {
 
 .header-bottom__nav-item:hover,
 .header-bottom__item-inner:hover,
-.basket__icon:hover {
+.item_st_pic:hover {
   animation: 1s scaling ease-in;
 }
 
@@ -275,7 +273,7 @@ body {
   margin-right: 120px;
 }
 
-.menu__item {
+.item {
   text-align: center;
 }
 
@@ -347,27 +345,24 @@ body {
   column-gap: 136px;
 }
 
-.main__text {
+.text_size_l {
   font-size: 48px;
   font-weight: normal;
-  color: #1A1A1A;
+  color: #1a1a1a;
+  flex: 1 0 250px;
 }
 
-.heading__text {
-  margin: 2px 0 2px 55px;
+.text_e_heading {
+  margin: 2px 0;
   line-height: 58px;
 }
 
-.text_f_no-flex {
-  flex: 0;
-}
-
-.heading__text-info {
-  margin: 13px 85px 1px 0;
+.designing-info__text {
+  margin: 13px 0 1px;
   max-width: 569px;
   font-size: 24px;
   line-height: 40px;
-  color: #AAAAAA;
+  color: #aaaaaa;
 }
 
 .designing-pics {
@@ -387,10 +382,10 @@ body {
   text-align: left;
 }
 
-.figcaption__text {
+.text_e_figcaption {
   font-size: 24px;
   line-height: 28px;
-  color: #1A1A1A;
+  color: #1a1a1a;
 }
 
 .brands {
@@ -398,14 +393,15 @@ body {
 }
 
 .brands__content {
-  margin: 0 135px 190px;
+  margin: 0 52px 190px;
   display: flex;
   flex-direction: column;
 }
 
-.brands__heading{
+.brands__heading {
   line-height: 48px;
   text-align: center;
+  flex: 0;
 }
 
 .brands__info-text {
@@ -414,7 +410,7 @@ body {
   font-size: 24px;
   line-height: 36px;
   text-align: center;
-  color: #4A4A4A;
+  color: #4a4a4a;
 }
 
 .brands__list {
@@ -515,6 +511,10 @@ body {
   width: calc(100% / 6);
 }
 
+.slider {
+  display: block;
+}
+
 .footer {
   position: relative;
   display: flex;
@@ -529,12 +529,12 @@ body {
 
 .footer__content {
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 97px 100px 51px;
 }
 
 .footer__logo {
-  margin-left: 55px;
   height: fit-content;
   transition: 0.35s linear;
 }
@@ -586,7 +586,7 @@ body {
   letter-spacing: 0.5px;
 }
 
-.text_c_gray {
+.text_c_red {
   color: red;
 }
 
@@ -650,11 +650,7 @@ body {
   margin-left: 40px;
 }
 
-/*.submit-form__reviews {
-  display: flex;
-}*/
-
-.submit-form__reviews-inner {
+.submit-form__review {
   margin-bottom: 16px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   box-sizing: border-box;
@@ -671,27 +667,22 @@ body {
   cursor: pointer;
 }
 
-.footer-inner__dropdown {
-  margin-right: 50px;
+.dropdown_e_footer {
+  //margin-right: 50px;
   width: fit-content;
 }
 
-.drop__select {
-  text-align: right;
-}
-
-.nav__item_m_right {
-  //margin-right: 70px;
+/*.nav__item_m_right {
+  margin-right: 70px;
   width: max-content;
-}
+}*/
 
-.form-confirm {
+.submit-form__info {
   margin-top: 56px;
   display: flex;
-  //flex-direction: column;
 }
 
-.form-text__confirm {
+.submit-form__info-text {
   width: fit-content;
   max-width: 369px;
   font-size: 11px;
@@ -699,9 +690,10 @@ body {
   letter-spacing: 2.4px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
+  user-select: none;
 }
 
-.checkbox__inner {
+.submit-form__checkbox {
   margin-right: 20px;
   border: 1px solid rgba(255, 255, 255, 0.5);
   box-sizing: border-box;
@@ -717,14 +709,14 @@ body {
   mask-position: -1px -1px;
 }
 
-.submit-form__btn-inner {
+.submit-form__btn-container {
   margin-top: 58px;
   text-align: right;
 }
 
-.submit-form__btn {
+/*.submit-form__btn {
   border: none;
-}
+}*/
 
 .submit-form__btn-text {
   font-size: 14px;
@@ -734,6 +726,7 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   cursor: pointer;
+  border: none;
 }
 
 .submit-form__btn-text:hover {
@@ -747,7 +740,7 @@ body {
   transform: rotate(-90deg);
 }
 
-.anchor__text_s_sm {
+.text_s_sm {
   font-size: 11px;
   line-height: 13px;
   letter-spacing: 2.4px;
@@ -773,7 +766,7 @@ body {
   .designing-pics__list {
     justify-content: center;
   }
-    
+
   .footer__content {
     justify-content: space-around;
     margin: 97px 0 51px;
@@ -784,14 +777,14 @@ body {
   }
 
   .footer__nav {
-    margin: 0 30px;
+    margin: 0 25px;
   }
 
   .footer__nav-list {
     max-width: 270px;
   }
 
-  .footer-inner__dropdown {
+  .dropdown_e_footer {
     margin-right: 15px;
   }
 
@@ -809,15 +802,14 @@ body {
     text-align: center;
   }
 
-  .form-confirm {
+  .submit-form__info {
     margin-top: 26px;
   }
 
-  .submit-form__btn-inner {
+  .submit-form__btn-container {
     margin-top: 20px;
     text-align: center;
   }
-
 }
 @media (min-width: 1024px) and (max-width: 1439px) {
   .container {
@@ -841,26 +833,17 @@ body {
     column-gap: 50px;
   }
 
-  .main__text {
-    font-size: 36px;
-  }
-
   .heading__text {
     flex: 1 0 250px;
   }
 
-  .text_f_no-flex {
-    flex: 0;
-  }
-
-  .heading__text-info {
+  .designing-info__text {
     font-size: 24px;
   }
 
   .brands__item {
     width: calc(100% / 3);
   }
-
 }
 @media (max-width: 1023px) {
   .container__hamburg {
@@ -870,7 +853,21 @@ body {
   .header-bottom__nav {
     display: none;
   }
+}
 
+@media (min-width: 768px) and (max-width: 1439px) {
+  .designing-pics__list {
+    justify-content: space-between;
+    gap: 32px 0;
+  }
+
+  .designing-pics__item {
+    width: calc(100% / 2);
+  }
+
+  .img_st_scalable {
+    width: 95%;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
@@ -889,10 +886,6 @@ body {
     column-gap: 4vw;
   }
 
-  .header-bottom__logo {
-    margin-left: 5%;
-  }
-
   .header-bottom__nav-item:nth-child(2) {
     margin: 0;
   }
@@ -905,22 +898,25 @@ body {
     column-gap: 46px;
   }
 
-  .text_f_no-flex {
-    flex: 0;
+  .text_size_l {
+    font-size: 40px;
   }
-
 }
 @media (max-width: 767px) {
   .designing-info__content {
     flex-direction: column;
   }
 
-  .heading__text {
+  .text_size_l {
+    font-size: 40px;
     flex: 0;
+  }
+
+  .heading__text {
     margin-bottom: 20px;
   }
 
-  .heading__text-info {
+  .designing-info__text {
     margin: 20px;
   }
 
@@ -929,20 +925,20 @@ body {
   }
 
   .brands__content {
-    margin: 0 10px 100px;
+    margin: 0 0 100px;
   }
 
   .brands__item {
     width: calc(100% / 2);
   }
-  
 }
 @media (max-width: 1023px) {
-  .header-bottom__logo {
+  /*.header-bottom__logo {
     margin-left: 7vw;
-  }
+  }*/
 
-  .header-bottom__nav, .header-bottom__list {
+  .header-bottom__nav,
+  .header-bottom__list {
     flex-direction: column;
     align-items: flex-end;
     padding: 4px;
@@ -963,9 +959,11 @@ body {
   .brands__item {
     width: calc(100% / 2);
   }
-
 }
 @media (min-width: 320px) and (max-width: 575px) {
+  .container {
+    max-width: 575px;
+  }
 
   .header.header-top__list {
     justify-content: flex-end;
@@ -983,35 +981,48 @@ body {
     margin: 20px auto 0;
     text-align: center;
   }
-
-  .submit-form__reviews-inner {
-    width: 85%;
-  }
-
 }
 @media (max-width: 575px) {
   .popup-map__content {
     width: 80%;
   }
 
-  .designing-room__content, .designing-info__content {
+  .header-top__list {
+    margin-right: 25px;
+  }
+
+  .header-bottom__content {
+    margin: 24px 14px 24px 27px;
+  }
+
+  .designing-room__content,
+  .designing-info__content {
     margin: 25px;
+  }
+
+  .text_size_l {
+    font-size: 28px;
   }
 
   .heading__text {
     font-size: 24px;
   }
 
-  .heading__text-info, .brands__info-text, .figcaption__text {
+  .designing-info__text,
+  .brands__info-text,
+  .text_e_figcaption {
     margin: 0;
     font-size: 16px;
   }
 
+  .submit-form__review {
+    width: 85%;
+  }
 }
 @media (max-width: 319px) {
-  .header-bottom__logo {
+  /*.header-bottom__logo {
     margin-left: 7vw;
-  }
+  }*/
 
   .footer__nav-list {
     width: fit-content;
@@ -1024,10 +1035,6 @@ body {
   .feedback-inner {
     margin: 20px auto 0;
     text-align: center;
-  }
-
-  .submit-form__reviews-inner {
-    width: 85%;
   }
 
   .brands__item {

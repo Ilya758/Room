@@ -1,8 +1,12 @@
 'use strict';
-let headDrop = [`.header-drop__text`, `.header-inner__text`, `#header__dropdown-list`, `#head_drop_icon`];
-let footDrop = [`.footer-drop__text`, `.footer-inner__text`, `#footer__dropdown-list`, `#foot_drop_icon`];
+let headDrop = [`.dropdown_item_head`, `#dropdown_text_head`, `#header__dropdown-list`, `#head_drop_icon`];
+let footDrop = [`.dropdown_item_foot`, `#dropdown_text_foot`, `#footer__dropdown-list`, `#foot_drop_icon`];
+let setHTML = text => {
+    $(`#header_drop .text_e_dropdown`).html(text);
+}
 let setWidth = text => {
-    $(text).width((String($(`.drop__select`).val()).length + 1) * 8);
+    console.log((String($(`#dropdown_text_foot`).val()).length));
+    $(text).width((String($(`#dropdown_text_foot`).val()).length + 1) * 8);
 }
 let showDropdown = (list, elem) => {
     $(list).toggleClass(`active`);
@@ -14,9 +18,12 @@ let setValue = (select, val) => {
 let closeDropdown = ([elem, select, list, icon]) => {
     $(elem).on(`click`, (evt) => {
         let text = $(evt.target).text();
-        $(select).attr('value', text);
+        if ($(list)[0] == $(`#footer__dropdown-list`)[0]) {
+            $(select).attr('value', text);
+            setWidth(select);
+        }
+        else setHTML(text);
         showDropdown(list, icon);
-        setWidth(select);
     })
 }
 
@@ -40,12 +47,12 @@ for (let evt of [`click`]) {
     $(`#footer_drop`).on(evt, () => {
         showDropdown(`#footer__dropdown-list`, `#foot_drop_icon`)
     })
-    $(`.checkbox__inner`).on(evt, () => {
-        $(`.checkbox__inner`).toggleClass(`checkbox_v_active`);
+    $(`.submit-form__info`).on(evt, () => {
+        $(`.submit-form__checkbox`).toggleClass(`checkbox_v_active`);
         if ($(`#check__email`).attr(`checked`)) $(`#check__email`).attr(`checked`, false)
         else $(`#check__email`).attr(`checked`, true)
     })
-    $(`.submit-form__btn`).on(evt, evt => {
+    $(`.submit-form__btn-container`).on(evt, evt => {
         if (((String($(`#review__text`).val()).length) == 0) || !($(`#check__email`).attr(`checked`))) {
             evt.preventDefault();
             alert(`Please, accept the terms`);
@@ -72,15 +79,15 @@ for (let elem of [`mouseover`, `mouseout`]) {
     $(`.feedback__icons`).on(elem, evt => {
         $(evt.target).toggleClass(`icons_v_hover`);
     })
-    $(`.footer__item_m_padding`).on(elem, evt => {
-        $(evt.target).toggleClass(`text_c_gray`);
+    $(`.footer__item`).on(elem, evt => {
+        $(evt.target).toggleClass(`text_c_red`);
     })
 }
 
 $(window).on(`click`, evt => {
     console.log(evt.target)
     let dropdownHandler = () => {
-        let values = Object.values(($(`.drop__select`))).splice(0, 2)
+        let values = Object.values(($(`.text_e_dropdown`))).splice(0, 2)
         let arrows = $(`.--arrow-down`)
         if (evt.target != values[0] && evt.target != values[1] && evt.target != arrows[0] && evt.target != arrows[1] && evt.target != $(`.--icon-hamburg`)[0]) {
             $(`.dropdown__list`).removeClass(`active`);
@@ -92,7 +99,6 @@ $(window).on(`click`, evt => {
         $(`.header-bottom__nav`).removeClass(`dropdown__list`);
 })
 
-setValue(`.header-inner__text`, 'US')
-setValue(`.footer-inner__text`, 'US')
-setWidth(`.header-inner__text`);
-setWidth(`.footer-inner__text`);
+//setValue(`.header - inner__text`, 'US')
+setHTML(`US`);
+//setWidth(`.header - inner__text`);
