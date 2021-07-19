@@ -511,8 +511,76 @@ body {
   width: calc(100% / 6);
 }
 
-.slider {
+.slider__content {
+  position: relative;
   display: block;
+  margin-bottom: 83px;
+}
+
+.slider__content-item {
+  text-align: center;
+}
+
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  align-items: flex-start;
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  font-size: 0;
+  width: 23px;
+  height: 42px;
+  margin: -21px 0 0 0;
+  background-color: white;
+  opacity: 0.6;
+  transition: 0.2s linear;
+}
+
+.slick-arrow:hover {
+  opacity: 1;
+}
+
+.slick-prev {
+  left: 84px;
+  mask-image: url(../img/icons/arrow-left.svg);
+}
+
+.slick-next {
+  right: 84px;
+  mask-image: url(../img/icons/arrow-right.svg);
+}
+
+.slick-dots {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+  column-gap: 12px;
+}
+
+.slick-dots button {
+  mask-image: url(../img/icons/slider_dot.svg);
+  width: 12px;
+  height: 12px;
+  font-size: 0;
+  background-color: #e5e5e5;
+  transition: 0.2s linear;
+}
+
+.slick-active button {
+  mask-image: url(../img/icons/slider_dot_hover.svg);
+  background-color: #46856E;
+}
+
+.slick-disabled {
+  opacity: 0.5;
 }
 
 .footer {
@@ -931,12 +999,21 @@ body {
   .brands__item {
     width: calc(100% / 2);
   }
+
+  .slick-arrow {
+    mask-size: 50%;
+    mask-repeat: no-repeat;
+  }
+
+  .slick-prev {
+    left: 10%;
+  }
+  
+  .slick-next {
+    right: 6%;
+  }
 }
 @media (max-width: 1023px) {
-  /*.header-bottom__logo {
-    margin-left: 7vw;
-  }*/
-
   .header-bottom__nav,
   .header-bottom__list {
     flex-direction: column;

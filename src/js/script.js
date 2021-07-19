@@ -98,7 +98,10 @@ $(window).on(`click`, evt => {
     if (evt.target != $(`.header-bottom__nav`) && evt.target != $(`.--icon-hamburg`)[0])
         $(`.header-bottom__nav`).removeClass(`dropdown__list`);
 })
-
-//setValue(`.header - inner__text`, 'US')
 setHTML(`US`);
-//setWidth(`.header - inner__text`);
+$(`.slider__content`).slick({
+    dots: true,
+    centerMode: true,
+    speed: 500,
+    initialSlide: 1,
+});
