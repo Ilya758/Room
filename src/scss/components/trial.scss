@@ -1,0 +1,122 @@
+.trial {
+    display: flex;
+}
+
+.trial-info {
+    width: 100%;
+}
+
+.trial-info__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 100px 79px;
+    padding: 63px 0 26px;
+    background: #f2f2f2;
+    border-radius: 2px;
+    @media (max-width: 767px) {
+        margin: 0 0 79px;
+    }
+}
+
+.trial-info__heading {
+    font-size: 46px;
+    line-height: 51px;
+    text-align: center;
+    color: #000000;
+    @media (max-width: 1023px) {
+        font-size: 24px;
+    }
+}
+
+.trial-info__list {
+    padding: 67px 200px 70px;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    @media (max-width: 1439px) {
+        padding: 67px 150px 70px;
+    }
+    @media (max-width: 1023px) {
+        padding: 67px 75px 70px;
+    }
+    @media (max-width: 575px) {
+        padding: 30px;
+        row-gap: 30px;
+    }
+}
+
+.trial-info__item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    row-gap: 25px;
+    align-items: center;
+    @media (max-width: 575px) {
+        width: 100%;
+    }
+}
+
+.trial-info__icons {
+    width: 64px;
+    background-color: #aaaaaa;
+}
+
+.--shipping-icon {
+    mask-image: url(../../img/icons/shipping.svg);
+    height: 64px;
+}
+
+.--plug-icon {
+    mask-image: url(../../img/icons/plug_n_play.svg);
+    height: 51px;
+}
+
+.--cashback-icon {
+    mask-image: url(../../img/icons/cashback.svg);
+    height: 64px;
+}
+
+.trial-info__text {
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    letter-spacing: 0.75px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+}
+
+.trial-info__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #46856e;
+    border-radius: 2px;
+    padding: 0 24px;
+    height: 50px;
+    margin-bottom: 26px;
+    transition: 0.2s linear;
+    cursor: pointer;
+}
+
+.trial-info__btn-text {
+    font-size: 12px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: 0.2s linear;
+}
+
+.trial-info__btn:hover {
+    opacity: 0.7;    
+}
+
+.trial-info__terms {
+    transition: 0.2s linear;
+}
+
+.trial-info__terms:hover {
+    color: red;
+}

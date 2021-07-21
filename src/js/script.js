@@ -111,7 +111,7 @@ $(`.second-slider__content`).slick({
     speed: 500,
     initialSlide: 1,
     adaptiveHeight: true,
-    autoplay: true,
+    //autoplay: true,
     speed: 1000,
     pauseOnHover: true,
     pauseOnDotsHover: true,
