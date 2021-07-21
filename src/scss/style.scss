@@ -767,6 +767,8 @@ body {
   color: #aaaaaa;
 }
 
+@import "../scss/components/priorities.scss";
+
 .footer {
   position: relative;
   display: flex;
@@ -1335,6 +1337,7 @@ body {
 
   .reviews-inner__content {
     background-size: contain;
+    height: calc(200px + 15vh);
   }
 
   .reviews-inner__content-item:nth-child(-n + 3) {

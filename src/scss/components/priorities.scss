@@ -1,0 +1,131 @@
+.priorities {
+    display: flex;
+    flex-direction: column;
+}
+
+.priorities-heading {
+    width: 100%;
+}
+
+.priorities-heading__content {
+    display: flex;
+    flex-direction: column;
+    margin: 0 52px 212px;
+    padding: 0 48px;
+    @media (max-width: 767px) {
+        margin: 0 0 40px;
+        padding: 0 10px;
+    }
+}
+
+.priorities-heading__info {
+    max-width: 1024px;
+    font-size: 46px;
+    line-height: 52px;
+    color: #aaaaaa;
+    @media (min-width: 768px) {
+        font-size: 26px;
+    }
+    @media (max-width: 767px) {
+        font-size: 19px;
+    }
+}
+
+.priorities-heading__text {
+    margin-top: 25px;
+    font-size: 46px;
+    line-height: 52px;
+    color: #000000;
+    @media (min-width: 768px) {
+        font-size: 30px;
+    }
+    @media (max-width: 767px) {
+        font-size: 24px;
+    }
+}
+
+.priorities-pics {
+    width: 100%;
+}
+
+.priorities-pics__content {
+    margin: 0 52px;
+    @media (max-width: 575px) {
+        margin: 0;
+        padding: 0 10px;
+    }
+}
+
+.priorities-pics__list {
+    row-gap: 64px;
+    justify-content: space-between;
+    @media (max-width: 767px) {
+        row-gap: 30px;
+    }
+}
+
+.img_s_modified {
+    @media (min-width: 768px) and (max-width: 1439px) {
+        width: 60%;
+    }
+}
+
+.priorities-pics__item,
+.priorities-pics__info {
+    display: flex;
+}
+
+.priorities-pics__info {
+    margin: 0 128px 0 90px;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 27px;
+    @media (min-width: 1024px) and (max-width: 1439px) {
+        margin: 0 70px;
+    }
+    @media (min-width: 768px) {
+        margin: 0 0 0 70px;
+    }
+    @media (max-width: 767px) {
+        margin: 0;
+    }
+}
+
+.priorities-pics__text-heading {
+    font-size: 32px;
+    line-height: 36px;
+    color: #1a1a1a;
+    @media (max-width: 575px) {
+        font-size: 24px;
+    }
+}
+
+.priorities-pics__item {
+    @media (max-width: 767px) {
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
+
+.priorities-pics__text {
+    font-size: 16px;
+    line-height: 24px;
+    color: #aaaaaa;
+    @media (max-width: 575px) {
+        font-size: 14px;
+    }
+}
+
+.item_order_left {
+    @media (min-width: 768px) {
+        justify-content: flex-end;
+    }
+}
+
+.flex_order_left {
+    @media (min-width: 768px) {
+        order: -1;
+        margin: 0 70px 0 0;
+    }
+}
