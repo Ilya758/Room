@@ -574,13 +574,17 @@ body {
   transition: 0.2s linear;
 }
 
+.slick-dots button:hover {
+  background-color: red;
+}
+
 .slick-active button {
   mask-image: url(../img/icons/slider_dot_hover.svg);
   background-color: #46856e;
 }
 
 .slick-disabled {
-  opacity: 0.5;
+  opacity: 0.7;
 }
 
 .content_e_advantage {
@@ -768,6 +772,8 @@ body {
 }
 
 @import "../scss/components/priorities.scss";
+
+@import "../scss/components/second-slider.scss";
 
 .footer {
   position: relative;
