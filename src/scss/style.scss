@@ -631,6 +631,106 @@ body {
   height: 120px;
 }
 
+.reviews-inner {
+  width: 100%;
+}
+
+.reviews-inner__content {
+  flex-direction: column;
+  margin: 240px auto;
+  background: url(../img/review.jpg) no-repeat top center;
+  width: calc(100% - 114px);
+  height: 800px;
+}
+//тут тоже правки, но по листу
+.reviews-inner__content-list {
+  //position: absolute;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 120px 0 0 173px;
+  //top: 120px;
+  //left: 173px;
+}
+
+.reviews-inner__content-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviews-inner__content-item:nth-child(2) {
+  margin: 40px 0;
+}
+
+.reviews-inner__content-item:last-child {
+  margin-top: 46px;
+}
+
+.reviews-inner__content-icons {
+  display: flex;
+  column-gap: 3px;
+}
+
+.reviews-inner__content-text {
+  display: block;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+  max-width: 264px;
+  margin: 14px 0 8px;
+}
+
+.item_width_full {
+  width: 100%;
+  text-align: left;
+}
+
+.reviews-inner__content-link {
+  font-size: 16px;
+  line-height: 12px;
+  letter-spacing: 0.75px;
+  text-transform: uppercase;
+  color: #ffffff;
+  transition: 0.2s linear;
+}
+////тут правки по имгу
+/*.img_abs {
+  max-height: 100%;
+  z-index: -1;
+  position: absolute;
+}*/
+
+.reviews-inner__content-link:hover {
+  color: red;
+}
+
+.--star-icon {
+  mask-image: url(../img/icons/star.svg);
+  background-color: #fff4cb;
+  width: 21px;
+  height: 20px;
+}
+
+.--google-png-icon {
+  background-image: url(../img/icons/google_png.png);
+  width: 100px;
+  background-color: transparent;
+  height: 32px;
+}
+
+.--wayfair-png-icon {
+  background-image: url(../img/icons/wayfair_png.png);
+  width: 100px;
+  background-color: transparent;
+  height: 42px;
+}
+
+.--flexport-png-icon {
+  background-image: url(../img/icons/flexport_png.png);
+  width: 100px;
+  background-color: transparent;
+  height: 22px;
+}
+
 .--icon-cost {
   mask-image: url(../img/icons/cost.svg);
 }
@@ -860,10 +960,6 @@ body {
   text-align: right;
 }
 
-/*.submit-form__btn {
-  border: none;
-}*/
-
 .submit-form__btn-text {
   font-size: 14px;
   line-height: 60px;
@@ -911,6 +1007,10 @@ body {
 
   .designing-pics__list {
     justify-content: center;
+  }
+
+  .reviews-inner__content {
+    margin: 100px auto;
   }
 
   .footer__content {
@@ -1018,6 +1118,10 @@ body {
   .img_st_scalable {
     width: 95%;
   }
+
+  .reviews-inner__content-list {
+    margin: 120px 0 0 30px;
+  }
 }
 @media (min-width: 768px) and (max-width: 1023px) {
   .container {
@@ -1115,6 +1219,15 @@ body {
 
   .advantages-description__item {
     width: calc(100% / 1);
+  }
+
+  .reviews-inner__content {
+    margin: 50px auto;
+    width: 100%;
+  }
+
+  .reviews-inner__content-list {
+    margin: 120px 0 0 25px;
   }
 }
 @media (max-width: 1023px) {
@@ -1214,6 +1327,26 @@ body {
 
   .advantages-description__info {
     font-size: 14px;
+  }
+
+  .reviews-inner__content-list {
+    margin: 0 auto 0 10px;
+  }
+
+  .reviews-inner__content {
+    background-size: contain;
+  }
+
+  .reviews-inner__content-item:nth-child(-n + 3) {
+    display: none;
+  }
+
+  .reviews-inner__content-item:last-child {
+    width: 25%;
+  }
+
+  .reviews-inner__content-link {
+    line-height: 24px;
   }
 }
 @media (max-width: 319px) {
