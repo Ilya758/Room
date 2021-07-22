@@ -1,11 +1,12 @@
 @import "base/reset.scss";
-// or normalize
 @import "base/mixins.scss";
 @import "base/vars.scss";
 
 @font-face {
   font-family: "Roboto";
-  src: local("Roboto-Regular"), url(../fonts/Roboto-Regular.ttf) format("truetype");
+  src: local("Roboto-Regular"), 
+    url(../fonts/Roboto-Regular.woff2) format("woff2"),
+    url(../fonts/Roboto-Regular.ttf) format("truetype");
   font-weight: 400;
   font-style: normal;
 }
@@ -22,25 +23,13 @@
   }
 }
 
-@keyframes scaling {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
 @include landscapePhones {
   .container {
     padding: 0 15px;
   }
 }
 
-/*.wrapper {
+.wrapper {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -48,7 +37,7 @@
 
 .wrapper-inner {
   flex-grow: 1;
-}*/
+}
 
 body {
   min-width: 0 !important;
@@ -69,10 +58,45 @@ body {
 }
 
 .popup-map__content {
+  position: relative;
   background-color: #ffffff;
   width: 500px;
   max-height: 400px;
   margin: 100px auto;
+}
+
+.popup-map__btn {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: 50px;
+  right: 30px;
+  cursor: pointer;
+  @media (max-width: 767px) {
+    top: 50px;
+  }
+}
+
+.popup-map__btn::before {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 80px;
+  top: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: rotate(45deg);
+  transition: 0.7s linear;
+}
+
+.popup-map__btn::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 80px;
+  top: 0;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: rotate(-45deg);
+  transition: 0.7s linear;
 }
 
 .no-scroll {
@@ -106,7 +130,6 @@ body {
   font-family: Roboto;
   text-decoration: none;
   transition: 0.25s linear;
-  //word-wrap: break-word;
 }
 
 .text_e_dropdown {
@@ -184,7 +207,6 @@ body {
 
 .dropdown {
   position: relative;
-  //cursor: pointer;
   display: flex;
   justify-content: flex-end;
 }
@@ -265,7 +287,8 @@ body {
 .header-bottom__nav-item:hover,
 .header-bottom__item-inner:hover,
 .item_st_pic:hover {
-  animation: 1s scaling ease-in;
+  animation: 0.5s blinking ease-in;
+  font-weight: bold;
 }
 
 .header-bottom__nav-item:nth-child(2) {
@@ -646,14 +669,11 @@ body {
   width: calc(100% - 114px);
   height: 800px;
 }
-//тут тоже правки, но по листу
+
 .reviews-inner__content-list {
-  //position: absolute;
   flex-direction: column;
   align-items: flex-start;
   margin: 120px 0 0 173px;
-  //top: 120px;
-  //left: 173px;
 }
 
 .reviews-inner__content-item {
@@ -696,12 +716,6 @@ body {
   color: #ffffff;
   transition: 0.2s linear;
 }
-////тут правки по имгу
-/*.img_abs {
-  max-height: 100%;
-  z-index: -1;
-  position: absolute;
-}*/
 
 .reviews-inner__content-link:hover {
   color: red;
@@ -1345,7 +1359,7 @@ body {
 
   .reviews-inner__content {
     background-size: contain;
-    height: calc(200px + 15vh);
+    height: calc(200px + 25vh);
   }
 
   .reviews-inner__content-item:nth-child(-n + 3) {

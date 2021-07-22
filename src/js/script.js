@@ -1,21 +1,25 @@
 'use strict';
 let headDrop = [`.dropdown_item_head`, `#dropdown_text_head`, `#header__dropdown-list`, `#head_drop_icon`];
+
 let footDrop = [`.dropdown_item_foot`, `#dropdown_text_foot`, `#footer__dropdown-list`, `#foot_drop_icon`];
-let setHTML = text => {
+
+let setHTML = text => {//set inner Text for dropdown
     $(`#header_drop .text_e_dropdown`).html(text);
 }
-let setWidth = text => {
-    console.log((String($(`#dropdown_text_foot`).val()).length));
+let setWidth = text => {//set value for dropdown
     $(text).width((String($(`#dropdown_text_foot`).val()).length + 1) * 8);
 }
-let showDropdown = (list, elem) => {
+
+let showDropdown = (list, elem) => {//shows dropdown
     $(list).toggleClass(`active`);
     $(elem).toggleClass(`--arrow-down_st_active`);
 }
-let setValue = (select, val) => {
+
+let setValue = (select, val) => {//set value for dropdown
     $(select).attr('value', val);
 }
-let closeDropdown = ([elem, select, list, icon]) => {
+
+let closeDropdown = ([elem, select, list, icon]) => {//close dropdown
     $(elem).on(`click`, (evt) => {
         let text = $(evt.target).text();
         if ($(list)[0] == $(`#footer__dropdown-list`)[0]) {
@@ -30,17 +34,18 @@ let closeDropdown = ([elem, select, list, icon]) => {
 closeDropdown(headDrop);
 closeDropdown(footDrop);
 
-$(`#dropdown`).on(`mouseover`, (evt) => {
+$(`#dropdown`).on(`mouseover`, (evt) => {//hover effects 
     $(`#drop_text`).toggleClass(`text_st_hover`);
     $(`#drop_icon`).toggleClass(`icon_st_hover`);
     if (evt.target == $(window)) $(`#drop_icon`).removeClass(`icon_st_hover`);
 })
-$(`#dropdown`).on(`mouseout`, () => {
+
+$(`#dropdown`).on(`mouseout`, () => {//hover effects
     $(`#drop_text`).toggleClass(`text_st_hover`);
     $(`#drop_icon`).toggleClass(`icon_st_hover`);
 })
 
-for (let evt of [`click`]) {
+for (let evt of [`click`]) {//click handler
     $(`#header_drop`).on(evt, () => {
         showDropdown(`#header__dropdown-list`, `#head_drop_icon`)
     })
@@ -75,7 +80,7 @@ for (let evt of [`click`]) {
     })
 }
 
-for (let elem of [`mouseover`, `mouseout`]) {
+for (let elem of [`mouseover`, `mouseout`]) {//hover effects
     $(`.feedback__icons`).on(elem, evt => {
         $(evt.target).toggleClass(`icons_v_hover`);
     })
@@ -84,8 +89,7 @@ for (let elem of [`mouseover`, `mouseout`]) {
     })
 }
 
-$(window).on(`click`, evt => {
-    console.log(evt.target)
+$(window).on(`click`, evt => {//window-click handler
     let dropdownHandler = () => {
         let values = Object.values(($(`.text_e_dropdown`))).splice(0, 2)
         let arrows = $(`.--arrow-down`)
@@ -98,20 +102,21 @@ $(window).on(`click`, evt => {
     if (evt.target != $(`.header-bottom__nav`) && evt.target != $(`.--icon-hamburg`)[0])
         $(`.header-bottom__nav`).removeClass(`dropdown__list`);
 })
+
 setHTML(`US`);
-$(`.slider__content`).slick({
-    dots: true,
-    centerMode: true,
-    speed: 500,
-    initialSlide: 1,
-});
-$(`.second-slider__content`).slick({
+$(`.slider__content`).slick({//initialized first slider
     dots: true,
     centerMode: true,
     speed: 500,
     initialSlide: 1,
     adaptiveHeight: true,
-    //autoplay: true,
+});
+$(`.second-slider__content`).slick({//initializied second slider
+    dots: true,
+    centerMode: true,
+    speed: 500,
+    initialSlide: 1,
+    adaptiveHeight: true,
     speed: 1000,
     pauseOnHover: true,
     pauseOnDotsHover: true,
