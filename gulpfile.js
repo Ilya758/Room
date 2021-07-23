@@ -48,7 +48,9 @@ function browserSync() {
       baseDir: "./" + projectFolder + "/"
     },
     port: 3000,
-    notify: false
+    notify: false,
+    open: "external",
+    online: true
   });
 }
 

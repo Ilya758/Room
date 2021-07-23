@@ -54,6 +54,17 @@
     align-items: center;
     @media (max-width: 575px) {
         width: 100%;
+        margin-bottom: 30px;
+    }
+}
+
+.trial-info__item .icons {
+    cursor: initial;
+}
+
+.trial-info__item:nth-child(-n + 2) {
+    @media (max-width: 575px) {
+        margin-bottom: 30px;
     }
 }
 
@@ -110,7 +121,7 @@
 }
 
 .trial-info__btn:hover {
-    opacity: 0.7;    
+    opacity: 0.7;
 }
 
 .trial-info__terms {
