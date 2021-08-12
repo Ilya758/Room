@@ -1,4 +1,9 @@
 'use strict';
+
+function cl(m) {
+    return console.log(m);
+}
+
 let headDrop = [`.dropdown_item_head`, `#dropdown_text_head`, `#header__dropdown-list`, `#head_drop_icon`];
 
 let footDrop = [`.dropdown_item_foot`, `#dropdown_text_foot`, `#footer__dropdown-list`, `#foot_drop_icon`];
@@ -41,25 +46,25 @@ for (let evt of [`click`]) {//click handler
     $(`#footer_drop`).on(evt, () => {
         showDropdown(`#footer__dropdown-list`, `#foot_drop_icon`)
     })
-    $(`.submit-form__info`).on(evt, () => {
+    /**     $(`.submit-form__info`).on(evt, () => {
         $(`.submit-form__checkbox`).toggleClass(`checkbox_v_active`);
         if ($(`#check__email`).attr(`checked`)) $(`#check__email`).attr(`checked`, false)
         else $(`#check__email`).attr(`checked`, true)
-    })
+    }) */
     $(`.submit-form__btn-container`).on(evt, evt => {
         if (((String($(`#review__text`).val()).length) == 0) || !($(`#check__email`).attr(`checked`))) {
             evt.preventDefault();
             alert(`Please, accept the terms`);
         }
     })
-    $(`#map_btn`).on(evt, () => {
-        $(`.popup-map`).toggleClass(`active`);
+    /** $(`#map_btn`).on(evt, () => {
+        //$(`.popup-map`).toggleClass(`active`);
         $(`body`).toggleClass(`no-scroll`)
-    })
+    }) */
     $(`.popup-map`).on(evt, evt => {
         let val = Object.values($(`ymaps`)).filter(e => evt.target == e)
         if (val.length == 0) {
-            $(`.popup-map`).toggleClass(`active`);
+            //$(`.popup-map`).toggleClass(`active`);
             $(`body`).toggleClass(`no-scroll`);
         }
     })
@@ -78,7 +83,11 @@ for (let elem of [`mouseover`, `mouseout`]) {//hover effects
     })
 }
 
-$(window).on(`click`, evt => {//window-click handler
+document.addEventListener('click', () => {
+
+})
+
+/** $(window).on(`click`, evt => {//window-click handler
     let dropdownHandler = () => {
         let values = Object.values(($(`.text_e_dropdown`))).splice(0, 2);
         let arrows = $(`.--arrow-down`);
@@ -90,7 +99,7 @@ $(window).on(`click`, evt => {//window-click handler
     dropdownHandler();
     if (evt.target != $(`.header-bottom__nav`) && evt.target != $(`.--icon-hamburg`)[0])
         $(`.header-bottom__nav`).removeClass(`dropdown__list`);
-})
+}) */
 
 setHTML(`US`);
 
@@ -113,29 +122,6 @@ $(`.second-slider__content`).slick({//initializied second slider
     pauseOnDotsHover: true,
 });
 
-const PARAGRAPHS = Object.values($(`.advantages-description__info`)).slice(0, 3);
-const FIRST = PARAGRAPHS.map(e => e = String($(e).html()))
-const CLEAR = PARAGRAPHS.map(e => e = String($(e).html()).replace(new RegExp(`<br>`, `gi`), ``));
-
-let hyphensRemover = () => {
-    if ($(document).width() < 1440) {//this breakpoint uses for deleting tag
-        for (let i = 0; i < CLEAR.length; i++) {
-            $(PARAGRAPHS[i]).html(CLEAR[i]);
-        }
-    } else {
-        for (let i = 0; i < FIRST.length; i++) {
-            //console.log(FIRST[i])
-            $(PARAGRAPHS[i]).html(FIRST[i]);
-        }
-    }
-}
-
-hyphensRemover();
-
-(() => {//delete tag <br> in some paragraphs if evt.target == `resize`
-    $(window).on(`resize`, () => hyphensRemover())
-})();
-
 async function mapPromise(url) {//send request to API Yandex.Map and substitues API or img.png depending on response
     let response = fetch(url, {
         headers: `Access-Control-No-Origin`,
@@ -144,8 +130,29 @@ async function mapPromise(url) {//send request to API Yandex.Map and substitues 
         .then(e => {
             $(`#popup_content`).html(url)
         })
-        .catch(err =>
-            $(`#popup_content`).html(`<img src="../img/failed_map.png" alt="failed_map">`)
+        .catch(err => {
+            $(`#popup_content`).html(`<img class="failed_map" src="../img/failed_map.png" alt="failed_map">`);
+        }
         );
 }
-mapPromise(`https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A76d42377514b60e1a1950199dd3fa7fa5c6f25bf0b533112124ecd01292bab3d&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true`);
+let x = mapPromise(`https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A76d42377514b60e1a1950199dd3fa7fa5c6f25bf0b533112124ecd01292bab3d&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true`);
+
+const getMapElem = () => {
+    return document.querySelector('.failed_map');
+}
+
+let popupWrap = document.querySelector('.popup-map');
+let mapBtn = document.querySelector('#map_btn');
+
+mapBtn.addEventListener('click', () => {
+    popupWrap.classList.add('active');
+})
+
+
+document.addEventListener('click', (event) => {
+    let mapTarget = event.target.parentElement.parentElement.parentElement;
+    if (event.target !== getMapElem() && mapTarget !== mapBtn) {
+        popupWrap.classList.remove('active');
+    }
+})
+

@@ -352,24 +352,24 @@ body {
   display: block;
 }
 
-.designing {
+/*.designing {
   display: flex;
   flex-direction: column;
+}*/
+
+.room-designing {
+  display: block;
 }
 
-.designing-room {
-  width: 100%;
-}
-
-.designing-room__content {
+.room-designing__content {
   margin: 49px 56px 80px 57px;
 }
 
-.designing-info {
-  width: 100%;
+.about-designing {
+  display: block;
 }
 
-.designing-info__content {
+.about-designing__content {
   margin: 0 98px 0 102px;
   display: flex;
 }
@@ -381,7 +381,7 @@ body {
   flex: 1 0 250px;
 }
 
-.designing-info__content .text_size_l {
+.about-designing__content .text_size_l {
   @media (min-width: 1024px) {
     margin-right: 136px;
   }
@@ -390,7 +390,7 @@ body {
   }
 }
 
-.designing-info__heading {
+.about-designing__heading {
   margin: 2px 136px 2px 0;
   @media (max-width: 767px) {
     margin: 0;
@@ -403,7 +403,7 @@ body {
   line-height: 58px;
 }
 
-.designing-info__text {
+.about-designing__text {
   margin: 13px 0 1px;
   max-width: 569px;
   font-size: 24px;
@@ -439,6 +439,7 @@ body {
 
 .designing-pics__item {
   text-align: left;
+  max-width: 588px;
 }
 
 .designing-pics__item:nth-child(n + 2):nth-child(-n + 4) {
@@ -716,7 +717,7 @@ body {
 }
 
 .advantages-description__pics {
-  background: #aaaaaa;
+  background-color: #ffffff;
   display: flex;
   margin: 0 auto;
   mask-repeat: no-repeat;
@@ -825,15 +826,15 @@ body {
 }
 
 .--icon-cost {
-  mask-image: url(../img/icons/cost.svg);
+  background-image: url(../img/icons/cost.svg);
 }
 
 .--icon-time {
-  mask-image: url(../img/icons/time.svg);
+  background-image: url(../img/icons/time.svg);
 }
 
 .--icon-flex {
-  mask-image: url(../img/icons/flex.svg);
+  background-image: url(../img/icons/flex.svg);
 }
 
 .advantages-description__item {
@@ -1061,22 +1062,49 @@ body {
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
   user-select: none;
+  display: inline-flex;
+  align-items: center;
 }
 
 .submit-form__checkbox {
-  margin-right: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+  left: 40px;
   box-sizing: border-box;
-  width: 28px;
-  height: 26px;
+  position: relative;
   cursor: pointer;
 }
 
-.checkbox_v_active {
-  mask-image: url(../img/icons/checkbox.svg);
-  background: #a4a4a4;
-  mask-repeat: no-repeat;
-  mask-position: -1px -1px;
+.submit-form__checkbox-inner {
+  position: absolute;
+  z-index: -999;
+  opacity: 0;
+}
+
+.--checkbox-icon {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: -60px;
+  width: 28px;
+  height: 26px;
+  border: 1px solid #808080;
+}
+
+$arr: (before: 45, after: 135);
+
+@each $elem, $deg in $arr {
+  .submit-form__checkbox-inner:checked~.--checkbox-icon::#{$elem}{
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 1px);
+    content: "";
+    width: 85%;
+    height: 2px;
+    left: 2px;
+    background-color: #808080;
+    transform: rotate(#{$deg}deg);
+  }
 }
 
 .submit-form__btn-container {
