@@ -98,6 +98,13 @@
 }
 
 .trial-info__btn {
+    font-size: 12px;
+    line-height: 60px;
+    text-align: center;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    transition: 0.2s linear;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -108,16 +115,6 @@
     margin-bottom: 26px;
     transition: 0.2s linear;
     cursor: pointer;
-}
-
-.trial-info__btn-text {
-    font-size: 12px;
-    line-height: 60px;
-    text-align: center;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: #ffffff;
-    transition: 0.2s linear;
 }
 
 .trial-info__btn:hover {
