@@ -29,17 +29,13 @@
                 <a href="tel:646-791-3726" class="text header-top__text">TEL 646-791-3726</a>
               </li>
               <li class="item header-top__item">
-                <div class="dropdown">
-                  <div class="dropdown-inner" id="header_drop">
-                    <div class="text text_e_dropdown dropdown_text_head"></div>
-                    <span class="icons --arrow-down" id="head_drop_icon"></span>
-                  </div>
-                  <ul class="dropdown__list" id="header__dropdown-list">
-                    <li class="dropdown__list-item text dropdown_item_head">US</li>
-                    <li class="dropdown__list-item text dropdown_item_head">Tokio</li>
-                    <li class="dropdown__list-item text dropdown_item_head">Japan</li>
-                    <li class="dropdown__list-item text dropdown_item_head">Russia</li>
-                    <li class="dropdown__list-item text dropdown_item_head">Germany</li>
+                <div class="dropdown header-dropdown">
+                  <ul class="dropdown__list header-dropdown__list --arrow-down">
+                    <li class="dropdown__list-item text header-dropdown__item active" data-id="0"><span>US</span></li>
+                    <li class="dropdown__list-item text header-dropdown__item" data-id="1"><span>India</span></li>
+                    <li class="dropdown__list-item text header-dropdown__item" data-id="2"><span>Japan</span></li>
+                    <li class="dropdown__list-item text header-dropdown__item" data-id="3"><span>Russia</span></li>
+                    <li class="dropdown__list-item text header-dropdown__item" data-id="4"><span>Greece</span></li>
                   </ul>
                 </div>
             </ul>
@@ -118,28 +114,20 @@
             <div class="designing-pics__content">
               <ul class="list designing-pics__list">
                 <li class="item designing-pics__item">
-                  <figure>
-                    <img class="img_st_scalable" src="../img/phone-booth.jpg" alt="Phone Booth">
-                    <figcaption class="text text_e_figcaption">Phone Booth</figcaption>
-                  </figure>
+                  <img class="img_st_scalable" src="../img/phone-booth.jpg" alt="Phone Booth">
+                  <p class="text text_e_figcaption">Phone Booth</p>
                 </li>
                 <li class="item designing-pics__item">
-                  <figure>
-                    <img class="img_st_scalable" src="../img/focus-room.jpg" alt="Focus Room">
-                    <figcaption class="text text_e_figcaption">Focus Room</figcaption>
-                  </figure>
+                  <img class="img_st_scalable" src="../img/focus-room.jpg" alt="Focus Room">
+                  <p class="text text_e_figcaption">Focus Room</p>
                 </li>
                 <li class="item designing-pics__item">
-                  <figure>
-                    <img class="img_st_scalable" src="../img/meeting-room.jpg" alt="Meeting Room">
-                    <figcaption class="text text_e_figcaption">Meeting Room</figcaption>
-                  </figure>
+                  <img class="img_st_scalable" src="../img/meeting-room.jpg" alt="Meeting Room">
+                  <p class="text text_e_figcaption">Meeting Room</p>
                 </li>
                 <li class="item designing-pics__item">
-                  <figure>
-                    <img class="img_st_scalable" src="../img/open-meeting-room.jpg" alt="Open Meeting Room">
-                    <figcaption class="text text_e_figcaption">Open Meeting Room</figcaption>
-                  </figure>
+                  <img class="img_st_scalable" src="../img/open-meeting-room.jpg" alt="Open Meeting Room">
+                  <p class="text text_e_figcaption">Open Meeting Room</p>
                 </li>
               </ul>
             </div>
@@ -522,30 +510,26 @@
               <textarea class="submit-form__review text text_c_white" name="review" id="review__text"
                 rows="10"></textarea>
             </div>
-            <div class="dropdown">
-              <div class="dropdown-inner dropdown_e_footer" id="footer_drop">
-                <input readonly class="text text_e_dropdown" type="text" name="country" value="US"
-                  id="dropdown_text_foot">
-                <span class="icons --arrow-down" id="foot_drop_icon"></span>
-              </div>
-              <ul class="dropdown__list" id="footer__dropdown-list">
-                <li class="dropdown__list-item text dropdown_item_foot">US</li>
-                <li class="dropdown__list-item text dropdown_item_foot">Tokio</li>
-                <li class="dropdown__list-item text dropdown_item_foot">Japan</li>
-                <li class="dropdown__list-item text dropdown_item_foot">Russia</li>
-                <li class="dropdown__list-item text dropdown_item_foot">Germany</li>
+            <div class="dropdown footer-dropdown">
+              <ul class="dropdown__list footer-dropdown__list --arrow-down">
+                <li class="dropdown__list-item text footer-dropdown__item active" data-id="0"><span>US</span></li>
+                <li class="dropdown__list-item text footer-dropdown__item" data-id="1"><span>India</span></li>
+                <li class="dropdown__list-item text footer-dropdown__item" data-id="2"><span>Japan</span></li>
+                <li class="dropdown__list-item text footer-dropdown__item" data-id="3"><span>Russia</span></li>
+                <li class="dropdown__list-item text footer-dropdown__item" data-id="4"><span>Greece</span></li>
               </ul>
             </div>
             <div class="submit-form__info">
               <label class="submit-form__checkbox">
                 <input class="submit-form__checkbox-inner" type="checkbox" name="check" id="check__email">
-                <p class="text submit-form__info-text">Yes. I would like to receive marketing communications from ROOM
+                <span class="text submit-form__info-text">Yes. I would like to receive marketing communications from
+                  ROOM
                   about
                   product updates and special
                   offers.
                   Please refer to ROOM’s Privacy Policy for more information about how
                   we process your data (including how to unsubscribe).
-                </p>
+                </span>
                 <span class="--checkbox-icon"></span>
               </label>
             </div>
