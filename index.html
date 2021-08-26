@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Room</title>
+  <link rel="shortcut icon" href="img/icons/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="popup-map">
+    <div class="popup-map__btn"></div>
+    <div class="popup-map__content" id="popup_content">
+    </div>
+  </div>
+  <div class="wrapper">
+    <div class="wrapper-inner">
+      <header class="header" id='toTop'>
+        <div class="header-top">
+          <div class="container">
+            <ul class="list header-top__list">
+              <li class="item header-top__item">
+                <span class="text header-top__text">CONTACT SALES</span>
+              </li>
+              <li class="item header-top__item">
+                <a href="tel:646-791-3726" class="text header-top__text">TEL 646-791-3726</a>
+              </li>
+              <li class="item header-top__item">
+                <div class="dropdown header-dropdown">
+                  <ul class="dropdown__list header-dropdown__list --arrow-down">
+                    <li class="dropdown__list-item text header-dropdown__item active" data-id="0"><span>US</span></li>
+                    <li class="dropdown__list-item text header-dropdown__item" data-id="1"><span>India</span></li>
+                    <li class="dropdown__list-item text header-dropdown__item" data-id="2"><span>Japan</span></li>
+                    <li class="dropdown__list-item text header-dropdown__item" data-id="3"><span>Russia</span></li>
+                    <li class="dropdown__list-item text header-dropdown__item" data-id="4"><span>Greece</span></li>
+                  </ul>
+                </div>
+            </ul>
+          </div>
+        </div>
+        <div class="header-bottom">
+          <div class="container">
+            <div class="content header-bottom__content">
+              <div class="header-bottom__logo">
+                <a href="#" target="_blank">
+                  <img src="img/logo_header.svg" alt="logo_header">
+                </a>
+              </div>
+              <div class="container__hamburg">
+                <span class="icons --icon-hamburg"></span>
+              </div>
+              <nav class="list header-bottom__nav">
+                <div class="list header-bottom__nav-base">
+                  <ul class="list header-bottom__list list_gap_no-gap">
+                    <li class="item header-bottom__nav-item">
+                      <a href="#" target="_blank" class="text header-bottom__link">PRODUCTS</a>
+                    </li>
+                    <li class="item header-bottom__nav-item">
+                      <a href="#" target="_blank" class="text header-bottom__link">EXPLORE</a>
+                    </li>
+                    <li class="item header-bottom__nav-item">
+                      <a href="#" target="_blank" class="text header-bottom__link">SHOP</a>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="list header-bottom__nav-additional">
+                  <li class="item header-bottom__item" id="map_btn">
+                    <ul class="header-bottom__item-inner map-container">
+                      <li class="item">
+                        <span class="icons --dot-icon text header-bottom__link"></span>
+                      </li>
+                      <li class="item">
+                        <span class="text header-bottom__link">SHOWROOMS</span>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="item item_st_pic">
+                    <a href="#" target="_blank" class="header-nav__link">
+                      <span class="icons --basket-icon"></span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <main class="main">
+        <section class="room-designing">
+          <div class="container">
+            <div class="room-designing__content">
+              <img src="img/room_workspace.jpg" alt="room_workspace">
+            </div>
+          </div>
+        </section>
+        <section class="about-designing">
+          <div class="container">
+            <div class="about-designing__content">
+              <h1 class="text text_size_l text_e_heading text_f_no-flex">
+                Design that inspires a better way to work.
+              </h1>
+              <p class="text about-designing__text">We've developed a series of purpose-built rooms that offer
+                companies
+                looking for change an affordable, sustainable, and flexible alternative to fixed construction and
+                traditional office design.</p>
+            </div>
+          </div>
+        </section>
+        <section class="designing-pics">
+          <div class="container">
+            <div class="designing-pics__content">
+              <ul class="list designing-pics__list">
+                <li class="item designing-pics__item">
+                  <img class="img_st_scalable" src="img/phone-booth.jpg" alt="Phone Booth">
+                  <p class="text text_e_figcaption">Phone Booth</p>
+                </li>
+                <li class="item designing-pics__item">
+                  <img class="img_st_scalable" src="img/focus-room.jpg" alt="Focus Room">
+                  <p class="text text_e_figcaption">Focus Room</p>
+                </li>
+                <li class="item designing-pics__item">
+                  <img class="img_st_scalable" src="img/meeting-room.jpg" alt="Meeting Room">
+                  <p class="text text_e_figcaption">Meeting Room</p>
+                </li>
+                <li class="item designing-pics__item">
+                  <img class="img_st_scalable" src="img/open-meeting-room.jpg" alt="Open Meeting Room">
+                  <p class="text text_e_figcaption">Open Meeting Room</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="brands">
+          <div class="container">
+            <div class="brands__content">
+              <h2 class="text text_size_l text_e_heading text_f_no-flex brands__heading">The world's leading brands
+                choose ROOM.</h2>
+              <span class="text brands__info-text">Over 3,000 and counting.</span>
+              <ul class="list brands__list">
+                <li class="item brands__item"><span class="icons --nike-icon"></span></li>
+                <li class="item brands__item"><span class="icons --nasa-icon"></span></li>
+                <li class="item brands__item"><span class="icons --google-icon"></span></li>
+                <li class="item brands__item"><span class="icons --uber-icon"></span></li>
+                <li class="item brands__item"><span class="icons --walmart-icon"></span></li>
+                <li class="item brands__item"><span class="icons --salesforce-icon"></span></li>
+                <li class="item brands__item"><span class="icons --hulu-icon"></span></li>
+                <li class="item brands__item"><span class="icons --reddit-icon"></span></li>
+                <li class="item brands__item"><span class="icons --knotel-icon"></span></li>
+                <li class="item brands__item"><span class="icons --samsung-icon"></span></li>
+                <li class="item brands__item"><span class="icons --amazon-icon"></span></li>
+                <li class="item brands__item"><span class="icons --angellist-icon"></span></li>
+                <li class="item brands__item"><span class="icons --buzzfeed-icon"></span></li>
+                <li class="item brands__item"><span class="icons --apple-icon"></span></li>
+                <li class="item brands__item"><span class="icons --harrys-icon"></span></li>
+                <li class="item brands__item"><span class="icons --asana-icon"></span></li>
+                <li class="item brands__item"><span class="icons --jpmorgan-icon"></span></li>
+                <li class="item brands__item"><span class="icons --greenpeace--icon"></span></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <section class="slider">
+          <div class="container">
+            <div class="slider__content">
+              <div class="slider__content-item">
+                <img src="img/slider1-first-img.png" alt="slider1-first-img">
+              </div>
+              <div class="slider__content-item">
+                <img src="img/slider1-second-img.png" alt="slider1-second-img">
+              </div>
+              <div class="slider__content-item">
+                <img src="img/slider1-third-img.png" alt="slider1-third-img">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="advantages">
+          <div class="advantages-heading">
+            <div class="container">
+              <div class="content advantages-heading__content content_e_advantage">
+                <h3 class="text advantages-heading__text">
+                  Our simple and seamless modular products allow teams to shape and then reshape their work
+                  environment
+                  with ease.
+                </h3>
+                <span class="text text_c_green">GET IN TOUCH</span>
+              </div>
+            </div>
+          </div>
+          <div class="advantages-description">
+            <div class="container">
+              <div class="content advantages-description__content content_e_advantage">
+                <ul class="list advantages-description__list">
+                  <li class="advantages-description__item">
+                    <div class="advantages-description__pics icons --icon-cost"></div>
+                    <span class="text text_c_black text_margin_sm">Cost-effective</span>
+                    <p class="text advantages-description__info">At a fraction of the cost of traditional
+                      <br>construction, our pre-fab solutions create <br>
+                      additional space for focused work and <br>
+                      collaboration without constantnoise, debris
+                      and <br> distraction.
+                    </p>
+                  </li>
+                  <li class="advantages-description__item">
+                    <div class="advantages-description__pics icons --icon-time"></div>
+                    <span class="text text_c_black text_margin_sm">Time Saving</span>
+                    <p class="text advantages-description__info">Thoughtful design ensures simple installation <br> in a
+                      few hours or less. And, because our <br> products are safety ensured, you'll never have <br>
+                      to spend time or money
+                      chasing after permits,<br> contractors, and more.</p>
+                  </li>
+                  <li class="advantages-description__item">
+                    <div class="advantages-description__pics icons --icon-flex"></div>
+                    <span class="text text_c_black text_margin_sm">Flexible </span>
+                    <p class="text advantages-description__info">Unlike traditional construction, our purpose-built <br>
+                      products
+                      were designed to adapt with your <br> workspace and can easily be positioned in various <br>
+                      places
+                      throughout your office, or to an entirely new <br> location.</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="reviews">
+          <div class="reviews-inner">
+            <div class="container">
+              <div class="content reviews-inner__content">
+                <ul class="list reviews-inner__content-list">
+                  <li class="reviews-inner__content-item">
+                    <ul class="reviews-inner__content-icons">
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                    </ul>
+                    <span class="text reviews-inner__content-text">“We can now have meetings in peace.”</span>
+                    <span class="icons --google-png-icon"></span>
+                  </li>
+                  <li class="reviews-inner__content-item">
+                    <ul class="reviews-inner__content-icons">
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                    </ul>
+                    <span class="text reviews-inner__content-text">“Amazing private space to get work done.”</span>
+                    <span class="icons --wayfair-png-icon"></span>
+                  </li>
+                  <li class="reviews-inner__content-item">
+                    <ul class="reviews-inner__content-icons">
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                      <li class="icons --star-icon"></li>
+                    </ul>
+                    <span class="text reviews-inner__content-text">“Our booths are in constant use.”</span>
+                    <span class="icons --flexport-png-icon"></span>
+                  </li>
+                  <li class="reviews-inner__content-item item_width_full">
+                    <a class="text reviews-inner__content-link" href="#" target="_blank">READ MORE REVIEWS</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="priorities">
+          <div class="priorities-heading">
+            <div class="container">
+              <div class="content priorities-heading__content">
+                <p class="text priorities-heading__info">
+                  We take a human approach to a <br> business-to-business industry, breaking the boundaries between
+                  corporate
+                  and <br> personal, and rethinking every step of the user experience along the way.
+                </p>
+                <h3 class="text priorities-heading__text">We make work, work for you.</h3>
+              </div>
+            </div>
+          </div>
+          <div class="priorities-pics">
+            <div class="container">
+              <div class="content priorities-pics__content">
+                <ul class="list priorities-pics__list">
+                  <li class="item priorities-pics__item">
+                    <img class="img_s_modified" src="img/meeting.jpg" alt="meeting">
+                    <div class="priorities-pics__info">
+                      <span class="text priorities-pics__text-heading">We sell direct.</span>
+                      <span class="text priorities-pics__text">We make extra room in the budget without compromising
+                        quality by selling
+                        direct. No middle man, and no additional construction required.</span>
+                    </div>
+                  </li>
+                  <li class="item priorities-pics__item item_order_left">
+                    <img class="img_s_modified" src="img/touch_arm.jpg" alt="touch_arm">
+                    <div class="flex_order_left priorities-pics__info">
+                      <span class="text priorities-pics__text-heading">We build with purpose.
+
+                      </span>
+                      <span class="text priorities-pics__text">We’re not just building another room with four walls,
+                        we’re building a more
+                        productive workspace. We design with you in mind, looking at every detail as an opportunity to
+                        enable a better working environment for everyone.</span>
+                    </div>
+                  </li>
+                  <li class="item priorities-pics__item">
+                    <img class="img_s_modified" src="img/water_pic.jpg" alt="water_pic">
+                    <div class="priorities-pics__info">
+                      <span class="text priorities-pics__text-heading">We design sustainably.</span>
+                      <span class="text priorities-pics__text">From design to delivery, we strive to lessen our impact
+                        on
+                        the environment. Our
+                        products are engineered with recycled materials and replace multiple cycles of construction,
+                        minimizing noise and our footprint.</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="second-slider">
+          <div class="container">
+            <div class="content second-slider__content">
+              <div class="second-slider__content-item">
+                <img src="img/slider2-first-img.png" alt="/slider2-first-img.png" class="second-slider__pic">
+              </div>
+              <div class="second-slider__content-item">
+                <img src="img/slider2-second-img.jpg" alt="/slider2-second-img.jpg" class="second-slider__pic">
+              </div>
+              <div class="second-slider__content-item">
+                <img src="img/slider2-third-img.jpg" alt="slider2-third-img.jpg" class="second-slider__pic">
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="trial">
+          <div class="trial-info">
+            <div class="container">
+              <div class="content trial-info__content">
+                <h3 class="text trial-info__heading">100 day risk-free trial</h3>
+                <ul class="list trial-info__list">
+                  <li class="item trial-info__item">
+                    <span class="icons trial-info__icons --shipping-icon"></span>
+                    <span class="text trial-info__text">FREE SHIPPING</span>
+                  </li>
+                  <li class="item trial-info__item">
+                    <span class="icons trial-info__icons --plug-icon"></span>
+                    <span class="text trial-info__text">PLUG & PLAY</span>
+                  </li>
+                  <li class="item trial-info__item">
+                    <span class="icons trial-info__icons --cashback-icon"></span>
+                    <span class="text trial-info__text">FREE RETURNS</span>
+                  </li>
+                </ul>
+                <a href="#" target="_blank" class="text trial-info__btn">
+                  GET A ROOM
+                </a>
+                <a href="#" target="_blank" class="text trial-info__terms">
+                  Terms & Conditions apply
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="container">
+        <div class="footer__content">
+          <div class="footer__logo">
+            <a href="#" target="_blank">
+              <img class="logo_max-width_none" src="img/logo_footer.png" alt="footer_header">
+            </a>
+          </div>
+          <nav class="footer__nav">
+            <ul class="list footer__nav-list">
+              <li class="item footer__nav-item">
+                <span class="text text_c_white">About</span>
+                <ul class="nav__list">
+                  <li class="nav__item footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Compare</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Reviews</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Risk-Free Trial</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Careers</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Press</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" class="text text_c_white" target="_blank">Podcast</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Blog</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item footer__nav-item">
+                <span class="text text_c_white">Support</span>
+                <ul class="nav__list">
+                  <li class="nav__item footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">FAQ</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Booth Assembly</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Delivery</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Room Service</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Warranty</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Terms of Use</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Privacy Policy</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Copyright</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item footer__nav-item">
+                <span class="text text_c_white">Showrooms</span>
+                <ul class="nav__list">
+                  <li class="nav__item footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">New York</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">London</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">San Francisco</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Paris</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Copenhagen</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Zürich</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Los Angeles</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Berlin</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Belgium</a>
+                  </li>
+                  <li class="footer__item">
+                    <a href="#" target="_blank" class="text text_c_white">Virtual Demo</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="item footer__nav-item">
+                <span class="text text_c_white">Office</span>
+                <p class="text text_c_white nav__item">599 Broadway, FL 9 New York, NY 10012</p>
+              </li>
+            </ul>
+          </nav>
+          <div class="feedback">
+            <div class="feedback-inner">
+              <span class="text text_c_white">Follow us</span>
+              <ul class="list feedback__list">
+                <li class="item feedback__item">
+                  <a href="#" target="_blank" class="menu__link">
+                    <span class="icons feedback__icons --facebook-icon"></span></a>
+                </li>
+                <li class="item feedback__item">
+                  <a href="#" target="_blank" class="menu__link">
+                    <span class="icons feedback__icons --instagram-icon"></span></a>
+                </li>
+                <li class="item feedback__item">
+                  <a href="#" target="_blank" class="menu__link">
+                    <span class="icons feedback__icons --linkedin-icon"></span></a>
+                </li>
+                <li class="item feedback__item">
+                  <a href="#" target="_blank" class="menu__link">
+                    <span class="icons feedback__icons --pinterest-icon"></span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <form action="#" target="_blank" class="submit-form">
+            <div class="submit-form__content">
+              <span class="text text_c_white">Join our mailing list</span>
+              <p class="text text_c_white submit-form__text">Be the first to hear everything about ROOM.</p>
+              <textarea class="submit-form__review text text_c_white" name="review" id="review__text"
+                rows="10"></textarea>
+            </div>
+            <div class="dropdown footer-dropdown">
+              <ul class="dropdown__list footer-dropdown__list --arrow-down">
+                <li class="dropdown__list-item text footer-dropdown__item active" data-id="0"><span>US</span></li>
+                <li class="dropdown__list-item text footer-dropdown__item" data-id="1"><span>India</span></li>
+                <li class="dropdown__list-item text footer-dropdown__item" data-id="2"><span>Japan</span></li>
+                <li class="dropdown__list-item text footer-dropdown__item" data-id="3"><span>Russia</span></li>
+                <li class="dropdown__list-item text footer-dropdown__item" data-id="4"><span>Greece</span></li>
+              </ul>
+            </div>
+            <div class="submit-form__info">
+              <label class="submit-form__checkbox">
+                <input class="submit-form__checkbox-inner" type="checkbox" name="check" id="check__email">
+                <span class="text submit-form__info-text">Yes. I would like to receive marketing communications from
+                  ROOM
+                  about
+                  product updates and special
+                  offers.
+                  Please refer to ROOM’s Privacy Policy for more information about how
+                  we process your data (including how to unsubscribe).
+                </span>
+                <span class="--checkbox-icon"></span>
+              </label>
+            </div>
+            <div class="submit-form__btn-container">
+              <input class="text submit-form__btn-text" type="submit" value="SIGN UP">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="footer__anchor">
+        <div class="item footer__anchor-inner">
+          <a href="#toTop" class="text text_c_white text_s_sm">RETURN TO THE TOP</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="js/jquery-3.6.0.js"></script>
+  <script src="js/slick.js"></script>
+  <script src="js/jquery.mobile-events.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
