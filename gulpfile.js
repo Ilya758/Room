@@ -138,6 +138,10 @@ function clean() {
 let build = gulp.series(clean, gulp.parallel(js, css, html, images, fonts));
 let watch = gulp.parallel(build, watchFiles, browserSync);
 
+const ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', () => gulp.src('./dist/**/*').pipe(ghPages()));
+
 exports.images = images;
 exports.js = js;
 exports.css = css;
