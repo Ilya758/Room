@@ -968,7 +968,6 @@ body {
   width: 12px;
   height: 12px;
   font-size: 0;
-  background-color: #e5e5e5;
   -webkit-transition: 0.2s linear;
   -o-transition: 0.2s linear;
   transition: 0.2s linear;
@@ -976,10 +975,6 @@ body {
 
 .slick-dots li:nth-child(2) {
   margin: 0 12px;
-}
-
-.slick-dots button:hover {
-  background-color: red;
 }
 
 .slick-active button {
