@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 $(`#popup_content`).html(url)
             })
             .catch(err => {
-                $(`#popup_content`).html(`<img class="failed_map" src="../img/failed_map.png" alt="failed_map">`);
+                $(`#popup_content`).html(`<img class="failed_map" src="img/failed_map.png" alt="failed_map">`);
             }
             );
     }
@@ -107,7 +107,6 @@ document.addEventListener('DOMContentLoaded', () => {
     })
 
     document.addEventListener('click', (event) => { // document-clicks handler
-        cl(Array.from(headerDropItem));
         const mapTarget = event.target.parentElement.parentElement.parentElement;
         if (event.target !== getMapElem() && mapTarget !== mapBtn) {
             popupWrap.classList.remove('active');

@@ -70,21 +70,21 @@
 
 .trial-info__icons {
     width: 64px;
-    background-color: #aaaaaa;
+    background-repeat: no-repeat;
 }
 
 .--shipping-icon {
-    mask-image: url(../../img/icons/shipping.svg);
+    background: url(../img/icons/shipping.svg);
     height: 64px;
 }
 
 .--plug-icon {
-    mask-image: url(../../img/icons/plug_n_play.svg);
+    background: url(../img/icons/plug_n_play.svg);
     height: 51px;
 }
 
 .--cashback-icon {
-    mask-image: url(../../img/icons/cashback.svg);
+    background: url(../img/icons/cashback.svg);
     height: 64px;
 }
 

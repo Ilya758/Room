@@ -171,26 +171,26 @@ body {
 
 .icons {
   display: inline-block;
-  background-color: #000000;
+  background-repeat: no-repeat;
   transition: 0.15s linear;
   height: 60px;
 }
 
 .--icon-hamburg {
-  mask-image: url(../img/icons/hamburger.svg);
+  background: url(../img/icons/hamburger.svg);
   width: 20px;
   height: 20px;
 }
 
 .--dot-icon {
-  mask-image: url(../img/icons/dot_icon.svg);
+  background: url(../img/icons/dot_icon.svg);
   width: 20px;
   height: 24px;
 }
 
 .--basket-icon {
   margin-right: 12px;
-  mask-image: url(../img/icons/basket_icon.svg);
+  background: url(../img/icons/basket_icon.svg);
   width: 25px;
   height: 25px;
 }
@@ -218,10 +218,9 @@ body {
   z-index: -999;
   right: 0;
   top: 8px;
-  mask-image: url(../img/icons/arrow-down.svg);
+  background: url(../img/icons/arrow-down.svg) no-repeat;
   width: 14px;
   height: 7px;
-  background-color: #aaaaaa;
   transition: 0.25s;
 }
 
@@ -541,92 +540,92 @@ body {
 }*/
 
 .--nike-icon {
-  mask-image: url(../img/icons/nike.svg);
+  background: url(../img/icons/nike.svg);
   width: 92px;
 }
 
 .--nasa-icon {
-  mask-image: url(../img/icons/nasa.svg);
+  background: url(../img/icons/nasa.svg);
   width: 99px;
 }
 
 .--google-icon {
-  mask-image: url(../img/icons/google.svg);
+  background: url(../img/icons/google.svg);
   width: 119px;
 }
 
 .--uber-icon {
-  mask-image: url(../img/icons/uber.svg);
+  background: url(../img/icons/uber.svg);
   width: 98px;
 }
 
 .--walmart-icon {
-  mask-image: url(../img/icons/walmart.svg);
+  background: url(../img/icons/walmart.svg);
   width: 145px;
 }
 
 .--salesforce-icon {
-  mask-image: url(../img/icons/salesforce.svg);
+  background: url(../img/icons/salesforce.svg);
   width: 106px;
 }
 
 .--hulu-icon {
-  mask-image: url(../img/icons/hulu.svg);
+  background: url(../img/icons/hulu.svg);
   width: 99px;
 }
 
 .--reddit-icon {
-  mask-image: url(../img/icons/reddit.svg);
+  background: url(../img/icons/reddit.svg);
   width: 141px;
 }
 
 .--knotel-icon {
-  mask-image: url(../img/icons/knotel.svg);
+  background: url(../img/icons/knotel.svg);
   width: 146px;
 }
 
 .--samsung-icon {
-  mask-image: url(../img/icons/samsung.svg);
+  background: url(../img/icons/samsung.svg);
   width: 119px;
 }
 
 .--amazon-icon {
-  mask-image: url(../img/icons/amazon.svg);
+  background: url(../img/icons/amazon.svg);
   width: 145px;
 }
 
 .--angellist-icon {
-  mask-image: url(../img/icons/angellist.svg);
+  background: url(../img/icons/angellist.svg);
   width: 151px;
 }
 
 .--buzzfeed-icon {
-  mask-image: url(../img/icons/buzzfeed.svg);
+  background: url(../img/icons/buzzfeed.svg);
   width: 102px;
 }
 
 .--apple-icon {
-  mask-image: url(../img/icons/apple.svg);
+  background: url(../img/icons/apple.svg);
   width: 99px;
 }
 
 .--harrys-icon {
-  mask-image: url(../img/icons/harrys.svg);
+  background: url(../img/icons/harrys.svg);
   width: 132px;
 }
 
 .--asana-icon {
-  mask-image: url(../img/icons/asana.svg);
+  background: url(../img/icons/asana.svg);
   width: 98px;
 }
 
 .--jpmorgan-icon {
-  mask-image: url(../img/icons/jpmorgan.svg);
+  background: url(../img/icons/jpmorgan.svg);
   width: 161px;
 }
 
 .--greenpeace--icon {
-  mask-image: url(../img/icons/greenpeace.svg);
+  background: url(../img/icons/greenpeace.svg);
   width: 107px;
 }
 
@@ -662,7 +661,7 @@ body {
   width: 23px;
   height: 42px;
   margin: -21px 0 0 0;
-  background-color: white;
+  background-repeat: no-repeat;
   opacity: 0.6;
   transition: 0.2s linear;
 }
@@ -673,12 +672,12 @@ body {
 
 .slick-prev {
   left: 84px;
-  mask-image: url(../img/icons/arrow-left.svg);
+  background: url(../img/icons/arrow-left.svg);
 }
 
 .slick-next {
   right: 84px;
-  mask-image: url(../img/icons/arrow-right.svg);
+  background: url(../img/icons/arrow-right.svg);
 }
 
 .slick-dots {
@@ -689,7 +688,7 @@ body {
 }
 
 .slick-dots button {
-  mask-image: url(../img/icons/slider_dot.svg);
+  background: url(../img/icons/slider_dot.svg);
   width: 12px;
   height: 12px;
   font-size: 0;
@@ -706,8 +705,7 @@ body {
 }
 
 .slick-active button {
-  mask-image: url(../img/icons/slider_dot_hover.svg);
-  background-color: #46856e;
+  background: url(../img/icons/slider_dot_hover.svg);
 }
 
 .slick-disabled {
@@ -772,7 +770,6 @@ body {
   display: flex;
   background: no-repeat center center;
   margin: 0 auto;
-  mask-repeat: no-repeat;
   width: 160px;
   height: 120px;
 
@@ -847,8 +844,7 @@ body {
 }
 
 .--star-icon {
-  mask-image: url(../img/icons/star.svg);
-  background-color: #fff4cb;
+  background: url(../img/icons/star.svg);
   width: 21px;
   height: 20px;
 }
@@ -1061,19 +1057,19 @@ p.nav__item {
 }
 
 .--facebook-icon {
-  mask-image: url(../img/icons/fb.svg);
+  background: url(../img/icons/fb.svg);
 }
 
 .--instagram-icon {
-  mask-image: url(../img/icons/inst.svg);
+  background: url(../img/icons/inst.svg);
 }
 
 .--linkedin-icon {
-  mask-image: url(../img/icons/linkedin.svg);
+  background: url(../img/icons/linkedin.svg);
 }
 
 .--pinterest-icon {
-  mask-image: url(../img/icons/pinterest.svg);
+  background: url(../img/icons/pinterest.svg);
 }
 
 .feedback-inner {
@@ -1433,8 +1429,8 @@ $arr: (before: 45, after: 135);
   }
 
   .slick-arrow {
-    mask-size: 50%;
-    mask-repeat: no-repeat;
+    background-size: 50%;
+    background-repeat: no-repeat;
   }
 
   .slick-prev {
@@ -1505,8 +1501,8 @@ $arr: (before: 45, after: 135);
 
   .advantages-description__pics {
     width: 100%;
-    mask-size: contain;
-    mask-position: center center;
+    background-size: contain;
+    background-position: center center;
     padding: 0 10px;
     margin-top: 20px;
   }
